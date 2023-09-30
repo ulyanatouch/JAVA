@@ -1,2 +1,2 @@
-# GIT
-git lessons
+# JAVA
+java lessons&homework
