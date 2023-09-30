@@ -1,0 +1,27 @@
+Создать программу, выводящую на экран ближайшее к 10 из двух чисел, записанных в переменные m и n.
+Числа могут быть, как целочисленные, так и дробные.
+
+==================================================================================
+
+
+public class Main {
+    public static void main(String[] args) {
+        double m = 7.5; 
+        double n = 11.2;
+        
+        double closestTo10 = findClosestTo10(m, n);
+        
+        System.out.println("Ближайшее к 10 число: " + closestTo10);
+    }
+    
+    public static double findClosestTo10(double m, double n) {
+        double distanceToM = Math.abs(m - 10);
+        double distanceToN = Math.abs(n - 10);
+        
+        if (distanceToM < distanceToN) {
+            return m;
+        } else {
+            return n;
+        }
+    }
+}
