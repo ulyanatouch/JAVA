@@ -1,0 +1,46 @@
+Реализовать программу, выводящую на экран результаты: 
+Сложения двух чисел
+Вычитания двух чисел
+Умножения двух чисел
+Деления двух чисел
+Каждая из арифметических операций должна быть реализована как отдельный метод.
+
+==============================================================
+
+
+public class Main {
+    public static void main(String[] args) {
+        double num1 = 10.0;
+        double num2 = 5.0;
+        
+        double sumResult = addNumbers(num1, num2);
+        double subtractResult = subtractNumbers(num1, num2);
+        double multiplyResult = multiplyNumbers(num1, num2);
+        double divideResult = divideNumbers(num1, num2);
+        
+        System.out.println("Результат сложения: " + sumResult);
+        System.out.println("Результат вычитания: " + subtractResult);
+        System.out.println("Результат умножения: " + multiplyResult);
+        System.out.println("Результат деления: " + divideResult);
+    }
+    
+    public static double addNumbers(double a, double b) {
+        return a + b;
+    }
+    
+    public static double subtractNumbers(double a, double b) {
+        return a - b;
+    }
+    
+    public static double multiplyNumbers(double a, double b) {
+        return a * b;
+    }
+    
+    public static double divideNumbers(double a, double b) {
+        if (b == 0) {
+            System.out.println("Деление на ноль невозможно.");
+            return Double.NaN; // Возвращаем NaN в случае деления на ноль
+        }
+        return a / b;
+    }
+}
